@@ -35,7 +35,7 @@ class Basket implements \Countable
 
 
         return $this->productsPrice
-        + ($this->productsPrice * $this->taxRate)
+        + ($this->productsPrice * $this->taxRate->getTaxRate())
         + ($this->productsPrice > 10 ? 2.0 : 3.0);
     }
 
